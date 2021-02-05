@@ -8,7 +8,7 @@ const nextConfig = {
     env: {
         NAME: 'AnimeLHD',
         URL: 'https://www.animelatinohd.com/',
-        APIURL: 'https://api.animelatinohd.com/api/',
+        APIURL: '',
         STREAMURL: 'https://api.animelatinohd.com/stream/',
         GA_TRACKING_ID: 'UA-162278791-1',
         DISQUS_SHORTNAME: 'animelatinohd'
