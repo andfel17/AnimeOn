@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/genero/:match*", "destination": "/animes?genre=:match*" }
+    { "source": "/genero/:genre*", "destination": "/animes?genre=:genre*" }
   ]
 }
