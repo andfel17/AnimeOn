@@ -7,8 +7,8 @@ const nextConfig = {
     },
     env: {
         NAME: 'AnimeON',
-        URL: 'http://www.localhost/',
-        APIURL: 'http://localhost/public/api/',
+        URL: 'http://www.animeon.moe/',
+        APIURL: 'http://api.animelatinohd.com/api/',
         STREAMURL: 'https://api.animelatinohd.com/stream/',
         GA_TRACKING_ID: 'UA-59047120-3',
         DISQUS_SHORTNAME: 'animeonmoe'
