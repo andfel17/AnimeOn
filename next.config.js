@@ -8,7 +8,7 @@ const nextConfig = {
     env: {
         NAME: '',
         URL: '',
-        APIURL: '',
+        APIURL: ''
     },
 }
 
