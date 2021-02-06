@@ -1,5 +1,7 @@
 {
   "rewrites": [
-    { "source": "/genero/:genre*", "destination": "/animes?genre=:genre*" }
+    { "source": "/genero/:genre*", "destination": "/animes?genre=:genre*" },
+    { "source": "/hentais", "destination": "https://www.kwhentais.com/hentais" },
+    { "source": "/hentai/(.*)", "destination": "https://www.kwhentais.com/$1" }
   ]
 }
