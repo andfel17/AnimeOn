@@ -18,7 +18,7 @@ class MyDocument extends Document {
                 </body>
                 <footer>
                     <script id="chatBroEmbedCode" src="/chat.js"></script>
-                    <script async src="https://arc.io/widget.min.js#R2yjvhvV"></script>
+                    <script async src="https://arc.io/widget.min.js#qTgnUASF"></script>
                 </footer>
             </Html>
         )
