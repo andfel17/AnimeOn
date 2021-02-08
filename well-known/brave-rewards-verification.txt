@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: animeon.moe
-Token: 6178b157612b156b190697a9637733276549b98b7776c4050a27773eed9df4cb
