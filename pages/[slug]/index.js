@@ -115,18 +115,18 @@ export default class index extends Component {
         return (
             <Layout>
                 <Head>
-                    <title>{`Ver ${data?.name} Sub Español Latino en HD Online • ${process.env.NAME}`}</title>
-                    <meta name="description" content={`${(data?.overview?.length > 165 ? (data?.overview?.slice(0,165) + '...') : data?.overview)}`} />
+                    <title>{`Ver ${data?.name} Sub Español o Latino en HD Online - ${process.env.NAME}`}</title>
+                    <meta name="description" content={`Lista de Capitulos de ${data?.name}, ${data?.name_alternative}, ${(data?.overview?.length > 165 ? (data?.overview?.slice(0,165) + '...') : data?.overview)}`} />
                     <link rel="canonical" href={`${process.env.URL}${slugAnime(data?.slug)}`} />
-                    <meta name="og:title" content={`Ver ${data?.name} Sub Español Latino en HD Online • ${process.env.NAME}`} />
-                    <meta name="og:description" content={`${(data?.overview?.length > 165 ? (data?.overview?.slice(0,165) + '...') : data?.overview)}`} />
+                    <meta name="og:title" content={`Ver ${data?.name} Sub Español o Latino en HD Online - ${process.env.NAME}`} />
+                    <meta name="og:description" content={`Lista de Capitulos de ${data?.name}, ${data?.name_alternative}, ${(data?.overview?.length > 165 ? (data?.overview?.slice(0,165) + '...') : data?.overview)}`} />
                     <meta name="og:url" content={`${process.env.URL}${slugAnime(data?.slug)}`} />
                     <meta name="og:locale" content="es_LA" />
                     <meta name="og:type" content="website" />
-                    <meta name="og:image" content={bannerAnime(data?.banner)} />
-                    <meta property="og:image:width" content="552" />
-			        <meta property="og:image:height" content="310" />
-                    <meta itemProp="image" content={bannerAnime(data?.banner)} />
+                    <meta name="og:image" content={posterAnime(data?.poster)} />
+                    <meta property="og:image:width" content="280" />
+			        <meta property="og:image:height" content="392" />
+                    <meta itemProp="image" content={posterAnime(data?.poster)} />
                 </Head>
                 <main className={styles.container}>
                     { this.banner() }

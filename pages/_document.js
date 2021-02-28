@@ -47,6 +47,7 @@ class MyDocument extends Document {
                 <footer>
                     <script id="chatBroEmbedCode" src="/chat.js"></script>
                     <script async src="https://arc.io/widget.min.js#qTgnUASF"></script>
+					<script type="module" src={`${process.env.URL}/pwabuilder-sw-register.js`}></script>
                 </footer>
             </Html>
         )

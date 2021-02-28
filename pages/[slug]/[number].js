@@ -173,11 +173,11 @@ export default class number extends Component {
         return (
             <Layout>
                 <Head>
-                    <title>{`Ver ${data?.anime?.name} Capítulo ${data?.number} Sub Español Latino en HD Online • ${process.env.NAME}`}</title>
-                    <meta name="description" content={`Anime ${data?.anime?.name} capitulo ${data?.number} Sub Español Latino, ver online y descargar en hd 720p sin ninguna limitación`} />
+                    <title>{`Ver ${data?.anime?.name} Capítulo ${data?.number} Sub Español o Latino Online - ${process.env.NAME}`}</title>
+                    <meta name="description" content={`${data?.anime?.name} Capítulo ${data?.number}, ${data?.anime?.name} Cap ${data?.number} Sub Español o Latino Online - ${process.env.NAME}`} />
                     <link rel="canonical" href={`${process.env.URL}${slugEpisode(data?.anime?.slug,data?.number)}`} />
-                    <meta name="og:title" content={`Ver ${data?.anime?.name} Capítulo ${data?.number} Sub Español Latino en HD Online • ${process.env.NAME}`} />
-                    <meta name="og:description" content={`Anime ${data?.anime?.name} capitulo ${data?.number} Sub Español Latino, ver online y descargar en hd 720p sin ninguna limitación`} />
+                    <meta name="og:title" content={`Ver ${data?.anime?.name} Capítulo ${data?.number} Sub Español o Latino Online - ${process.env.NAME}`} />
+                    <meta name="og:description" content={`${data?.anime?.name} Capítulo ${data?.number}, ${data?.anime?.name} Cap ${data?.number} Sub Español o Latino Online - ${process.env.NAME}`} />
                     <meta name="og:url" content={`${process.env.URL}${slugEpisode(data?.anime?.slug,data?.number)}`} />
                     <meta name="og:locale" content="es_LA" />
                     <meta name="og:type" content="video.episode" />

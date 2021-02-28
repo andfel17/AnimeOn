@@ -17,18 +17,18 @@ export default class index extends Component {
         return (
             <Layout>
                 <Head>
-                    <title>{`Ver Anime Online en HD Sub Español Latino Gratis • ${process.env.NAME}`}</title>
-                    <meta name="description" content={`Anime Online Gratis, mira los últimos capitulos de los animes del momento sin ninguna restriccion subtitulados al español latino en ${process.env.NAME}`} />
+                    <title>{`Anime Online en HD, Animes Gratis en Sub Español y Latino - ${process.env.NAME}`}</title>
+                    <meta name="description" content={`Anime Online gratis en sub español y latino, podrás disfrutar tus animes de manera gratuita, sin ninguna restricción en tu PC, Movil o Tablets - ${process.env.NAME}`} />
                     <link rel="canonical" href={`${process.env.URL}`} />
-                    <meta name="og:title" content={`Ver Anime Online en HD Sub Español Latino Gratis • ${process.env.NAME}`} />
-                    <meta name="og:description" content={`Anime Online Gratis, mira los últimos capitulos de los animes del momento sin ninguna restriccion subtitulados al español latino en ${process.env.NAME}`} />
+                    <meta name="og:title" content={`Anime Online en HD, Animes Gratis en Sub Español y Latino - ${process.env.NAME}`} />
+                    <meta name="og:description" content={`Anime Online gratis en sub español y latino, podrás disfrutar tus animes de manera gratuita, sin ninguna restricción en tu PC, Movil o Tablets - ${process.env.NAME}`} />
                     <meta name="og:url" content={`${process.env.URL}`} />
                     <meta name="og:locale" content="es_LA" />
                     <meta name="og:type" content="website" />
-                    <meta name="og:image" content="https://i.imgur.com/Iof3uSm.jpg" />
+                    <meta name="og:image" content={`${process.env.URL}/index.jpg`} />
                     <meta property="og:image:width" content="265" />
 			        <meta property="og:image:height" content="265" />
-                    <meta itemProp="image" content="https://i.imgur.com/Iof3uSm.jpg" />
+                    <meta itemProp="image" content={`${process.env.URL}/index.jpg`} />
                 </Head>
                 <main className={styles.container}>
                     <ListEpisodes episodes={releases}/>

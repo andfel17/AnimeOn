@@ -1,5 +1,4 @@
 const withPlugins = require('next-compose-plugins')
-const withImages = require('next-images')
 
 const nextConfig = {
     images: {
@@ -7,7 +6,7 @@ const nextConfig = {
     },
     env: {
         NAME: 'AnimeON',
-        URL: 'https://www.animeon.moe/',
+        URL: 'https://www.animeon.moe',
         APIURL: 'https://api.animelatinohd.com/api/',
         STREAMURL: 'https://api.animelatinohd.com/stream/',
         GA_TRACKING_ID: 'UA-59047120-3',
@@ -15,4 +14,4 @@ const nextConfig = {
     },
 }
 
-module.exports = withPlugins([[withImages]], nextConfig)
+module.exports = withPlugins([], nextConfig)

@@ -17,18 +17,18 @@ export default class calendario extends Component {
         return (
             <Layout>
                 <Head>
-                    <title>{`Calendario de animes • ${process.env.NAME}`}</title>
-                    <meta name="description" content={`Anime Online Gratis, mira los últimos capitulos de los animes del momento sin ninguna restriccion subtitulados al español latino en ${process.env.NAME}`} />
-                    <link rel="canonical" href={`${process.env.URL}/animes/calendario`} />
-                    <meta name="og:title" content={`Calendario de animes • ${process.env.NAME}`} />
-                    <meta name="og:description" content={`Anime Online Gratis, mira los últimos capitulos de los animes del momento sin ninguna restriccion subtitulados al español latino en ${process.env.NAME}`} />
+                    <title>{`Calendario de Animes - ${process.env.NAME}`}</title>
+                    <meta name="description" content={`Anime Online gratis en sub español y latino, podrás disfrutar tus animes de manera gratuita, sin ninguna restricción en tu PC, Movil o Tablets - ${process.env.NAME}`} />
+                    <link rel="canonical" href={`${process.env.URL}/animes`} />
+                    <meta name="og:title" content={`Calendario de Animes - ${process.env.NAME}`} />
+                    <meta name="og:description" content={`Anime Online gratis en sub español y latino, podrás disfrutar tus animes de manera gratuita, sin ninguna restricción en tu PC, Movil o Tablets - ${process.env.NAME}`} />
                     <meta name="og:url" content={`${process.env.URL}/animes/calendario`} />
                     <meta name="og:locale" content="es_LA" />
                     <meta name="og:type" content="website" />
-                    <meta name="og:image" content="https://i.imgur.com/Iof3uSm.jpg" />
+                    <meta name="og:image" content={`${process.env.URL}/index.jpg`} />
                     <meta property="og:image:width" content="265" />
                     <meta property="og:image:height" content="265" />
-                    <meta itemProp="image" content="https://i.imgur.com/Iof3uSm.jpg" />
+                    <meta itemProp="image" content={`${process.env.URL}/index.jpg`} />
                 </Head>
                 <main className={styles.container}>
                     <div className={styles.listCalendar}>
