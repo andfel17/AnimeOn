@@ -15,6 +15,13 @@ export default class AnimeEpisodeCard extends Component {
         return (
             <div className={styles.container}>
                 <div className={styles.holder}>
+                    <div className={styles.overlay}>
+                        <Link href={slugEpisode(anime?.slug, episode?.number)}>
+                            <a className={styles.play} alt={`${anime?.name} ${episode?.number}`} title={`${anime?.name} ${episode?.number}`}>
+                                <svg viewBox="0 0 24 24"><path d="M8,5.14V19.14L19,12.14L8,5.14Z"></path></svg>
+                            </a>
+                        </Link>
+                    </div>
                     <Image 
                         className="poster"
                         alt={`${anime?.name} ${episode?.number}`}
