@@ -15,7 +15,7 @@ export default class AnimeCalendar extends Component {
         return (
             <Link href={slugAnime(data?.slug)}>
                 <a className={styles.item} title={data?.name} alt={data?.name}>
-                    <div className={styles.content} style={{ backgroundImage: "url("+`${bannerAnime(data?.banner)}`+")"}}>
+                    <div className={styles.content} style={{ backgroundImage: "url("+`${process.env.URL}/_next/image?url=${bannerAnime(data?.banner)}&w=280&q=95`+")"}}>
                         <div className={styles.text}>
                             <p>{ isNowEpisode(data?.date) ? `Episodio ${data?.lastEpisode}` : `Episodio ${parseInt(data?.lastEpisode + 1)}` }
                                 <b>{ isNowEpisode(data?.date) ? getFromNow(data?.date) : ''}</b>
