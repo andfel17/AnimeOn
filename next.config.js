@@ -2,7 +2,9 @@ const withPlugins = require('next-compose-plugins')
 
 const nextConfig = {
     images: {
-        domains: ['i.imgur.com','*.tmdb.org','www.themoviedb.org']
+        domains: ['i.imgur.com','*.tmdb.org','www.themoviedb.org'],
+        deviceSizes: [40, 53, 140, 162, 182, 192, 236, 250, 280],
+        imageSizes: [40, 53, 140, 162, 182, 192, 236, 250, 280],
     },
     env: {
         NAME: 'AnimeON',

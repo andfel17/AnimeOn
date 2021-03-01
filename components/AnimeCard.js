@@ -22,11 +22,20 @@ export default class AnimeCard extends Component {
                                 <Image
                                     className="poster"
                                     alt={data?.name}
-                                    height="auto"
-                                    width="auto"
-                                    layout="responsive"
-                                    loading={"lazy"}
-                                    src={posterAnime(data?.poster)}/>
+									src={posterAnime(data?.poster)}
+									layout="responsive"
+									width="auto"
+									height="auto"                                    
+									quality={95}
+									sizes="(max-width: 360px) 22vw,
+										   (max-width: 480px) 14vw,
+										   (max-width: 640px) 11vw,
+										   (max-width: 1024px) 9vw,
+										   (max-width: 1280px) 6vw,
+                                           (max-width: 800px) 140px,
+										   (max-width: 1366px) 182px, 250px"
+                                    loading={"lazy"}       
+                                />									
                             </div>
                         </a>
                     </Link>

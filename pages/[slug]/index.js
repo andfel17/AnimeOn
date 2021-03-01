@@ -43,14 +43,16 @@ export default class index extends Component {
         return(
             <div className={styles.info}>
                 <div className={styles.cover}>
-                    <Image
+					<Image
                         className="poster"
                         alt={data?.name}
-                        height="auto"
-                        width="auto"
-                        layout="responsive"
-                        loading={"lazy"}
-                        src={posterAnime(data?.poster)}/>
+                        src={posterAnime(data?.poster)}
+						layout="responsive"
+						width="auto"
+						height="auto"
+						quality={95}
+						sizes="(max-width: 800px) 188px"
+					/>						
                 </div>
                 <div className={styles.list}>
                     <div className={styles.item}>
