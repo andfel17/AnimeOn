@@ -39,15 +39,16 @@ class MyDocument extends Document {
                     <meta name="robots" content="index, follow"/>
                     <link rel="preconnect" href="https://fonts.gstatic.com"/>
                     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"/>
-                </Head>
+					<script type="module" src={`${process.env.URL}/sw-register.js`}></script>
+			   </Head>
                 <body>
                     <Main />
                     <NextScript />
                 </body>
                 <footer>
                     <script id="chatBroEmbedCode" src="/chat.js"></script>
-					<script type="module" src={`${process.env.URL}/sw-register.js`}></script>
                     <script async src="https://arc.io/widget.min.js#qTgnUASF"></script>
+					<script src="/disableClick.js"></script>
                 </footer>
             </Html>
         )

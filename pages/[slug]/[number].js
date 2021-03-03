@@ -52,7 +52,8 @@ export default class number extends Component {
         if(e.target.name === 'languaje'){
             this.setState({
                 languaje: e.target.value,
-                iframe: getUrlVideo(data?.players[e.target.value][0])
+                iframe: getUrlVideo(data?.players[e.target.value][0]),
+                server: 0
             })
         }
         if(e.target.name === 'server'){
@@ -66,6 +67,8 @@ export default class number extends Component {
     videoPlayer = () => {
         const { data } = this.props;
         const { iframe, languaje, random, server } = this.state;
+        let seversandbox = ['gphotos','degoo','beta','videos','zplayer','evo','sendvid']
+        let checkSandbox = seversandbox.includes(data?.players[languaje][server]?.server?.title?.toLowerCase());        
         return(
             <div className={styles.videoPlayer}>
                 { getCheckLatino(data?.players) && (
@@ -94,7 +97,10 @@ export default class number extends Component {
                             </div>
                         </div>
                         <div className={styles.video}>
-                            <Iframe key={random} allow={"fullscreen"} url={iframe} display="initial"/>
+                        { checkSandbox
+                            ?   <Iframe sandbox="allow-scripts allow-same-origin" key={random} allowfullscreen={true} allow={"fullscreen"} url={iframe} display="initial"/>
+                            :   <Iframe key={random} allowfullscreen={true} allow={"fullscreen"} url={iframe} display="initial"/>
+                            }
                         </div>
                     </>
                 )}
@@ -200,6 +206,43 @@ export default class number extends Component {
 export async function getServerSideProps(context) {
     try {
         const res = await api.get(`episodes/${context.params.slug}/${context.params.number.replace('capitulo-','')}`);
+        Object.values(res.data.players).forEach((element) => {
+            element.forEach((el) => {
+                switch (el.server.title.toLowerCase()) {
+                    case 'gphotos':
+                        el.position = 0;
+                        break;
+                    case 'degoo':
+                        el.position = 1;
+                        break;
+                    case 'beta':
+                        el.position = 2;
+                        break;
+                    case 'videos':
+                        el.position = 3;
+                        break;
+                    case 'zplayer':
+                        el.position = 4;
+                        break;
+                    case 'gocdn':
+                        el.position = 9;
+                        break;
+                    case 'mega':
+                        el.position = 10;
+                        break;
+                    case 'fembed':
+                        el.position = 11;
+                        break;
+                    case 'okru':
+                        el.position = 12;
+                        break;                        
+                    default:
+                        el.position = 99;
+                        break;
+                }
+            })
+            element.sort((a,b)=> (a.position > b.position ? 1 : -1))
+        })        
         let isMobileView = (context.req 
             ? context.req.headers['user-agent']
             : navigator.userAgent
