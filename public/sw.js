@@ -1,4 +1,4 @@
-importScripts('https://arc.io/arc-sw-core.js')
+importScripts('https://arc.io/arc-sw-core.js');
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.1/workbox-sw.js');
 
 self.addEventListener("message", (event) => {
