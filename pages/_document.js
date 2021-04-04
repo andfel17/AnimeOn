@@ -40,6 +40,7 @@ class MyDocument extends Document {
                     <link rel="preconnect" href="https://fonts.gstatic.com"/>
                     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"/>
 					<script type="module" src={`${process.env.URL}/sw-register.js`}></script>
+		                    <script async src="https://arc.io/widget.min.js#qTgnUASF"></script>
 			   </Head>
                 <body>
                     <Main />
@@ -47,8 +48,7 @@ class MyDocument extends Document {
                 </body>
                 <footer>
                     <script id="chatBroEmbedCode" src="/chat.js"></script>
-                    <script async src="https://arc.io/widget.min.js#qTgnUASF"></script>
-					<script src="/disableClick.js"></script>
+	            <script src="/disableClick.js"></script>
                 </footer>
             </Html>
         )
